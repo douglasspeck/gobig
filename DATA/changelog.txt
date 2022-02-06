@@ -1,0 +1,63 @@
+╔════════════════════════════════════════════════════════════════╗
+║          ________              _______                         ║
+║         /   _____\            |   __  \   __                   ║
+║        |  |                   |  |  |  | |__|                  ║
+║        |  |_______   _______  |  |__| /   __   _______         ║
+║        |   ____   | |   _   | |   __  \  |  | |   _   |        ║
+║        |  |    |  | |  | |  | |  |  |  | |  | |  | |  |        ║
+║        |  |____|  | |  |_|  | |  |__|  | |  | |  |_|  |        ║
+║         \________/  |_______| |________| |__| |_____  |        ║
+║                                                _____| |        ║
+║                         Projeto Go Big        |_______|        ║
+║                                                                ║
+║                     Changelog + To do List                     ║
+╚════════════════════════════════════════════════════════════════╝
+
+Changelog's format is based on
+[Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to
+[Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ LAST MODIFICATION ━━━━━┓
+┃                                                                ┃
+┃ DATE: 06/02/2021                                               ┃
+┃                                                                ┃
+┃ AUTHOR: Douglas Speck [@tresdoug]                              ┃
+┃                                                                ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+*     ┏━━━━┓                                                     *
+*     ┃  ┏━┛┏━┓┏━┓┏━━━━┓┏━┓┏━┓┏━━━━┓┏━━━━┓┏━┓   ┏━━━━┓┏━━━━┓     *
+*     ┃  ┃  ┃ ┗┛ ┃┃ ┗┛ ┃┃  ┗ ┃┃ ━━━┓┃  ━┳┛┃ ┃   ┃ ┏┓ ┃┃ ━━━┓     *
+*     ┃  ┗━┓┃ ┏┓ ┃┃ ┏┓ ┃┃ ┓  ┃┃ ┏┓ ┃┃  ━┻┓┃ ┗━━┓┃ ┗┛ ┃┃ ┏┓ ┃     *
+*     ┗━━━━┛┗━┛┗━┛┗━┛┗━┛┗━┛┗━┛┗━━━━┛┗━━━━┛┗━━━━┛┗━━━━┛┗━━━━┛     *
+
+┏━ 0.1.0 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2021-02-06 ━━━━━┓
+┃┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┃┃ AUTHOR: Douglas Speck [@tresdoug]
+┃┃
+┃┃ ADDED:
+┃┃ - Landing Page (blank)           -> index.php;
+┃┃ - Codebase Setup                 -> CSS, DATA, IMG, JS, PHP;
+┃┃ - Main Stylesheets (blank)       -> CSS/fonts.css,
+┃┃                                     CSS/header.css,
+┃┃                                     CSS/home.css,
+┃┃                                     CSS/main.css;
+┃┃ - Images for the Landing Page    -> IMG/learning/**;
+┃┃ - Attribuition Document (drafts) -> DATA/attribuition.txt;
+┃┃ - Logo Images                    -> IMG/Logo/logo.png,
+┃┃                                     IMG/Logo/logo-dark.png;
+┃┃ - Changelog                      -> DATA/changelog.txt;
+┃┃ - Git Ignore (.DS_Store)         -> .gitignore;
+┃┃
+┃┃ CHANGED:
+┃┃ -
+┃┃
+┃┃ REMOVED:
+┃┃ -
+┃┃
+┗┛
+
+TO DO LIST:
+
+[ ] Landing Page;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <?php
-        $title = 'Projeto Go Big – Home';
+        $title = 'Projeto Go Big – Home';
         $keywords = '';
         $css = ['main', 'header', 'fonts', 'home'];
         $js = [];
