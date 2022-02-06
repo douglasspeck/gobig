@@ -9,6 +9,7 @@ header {
     align-items: center;
     grid-template-columns: 1fr 3fr 1fr;
     font-weight: bold;
+    background-color: #fff;
 }
 
 header img, header nav, #header-right {
@@ -76,6 +77,10 @@ header nav, #header-right {
 
 /* Dark Mode */
 
+body.dark header {
+    background-color: var(--c1);
+}
+
 body.dark #header-right label::before {
     width: calc(var(--x) * 1.2);
     height: calc(var(--x) * 1.2);
@@ -95,17 +100,4 @@ body.dark #header-right label::after {
         calc(var(--x) * -0.8) calc(var(--x) * 0.8) 0 #fff,
         calc(var(--x) * -0.8) calc(var(--x) * -0.8) 0 #fff,
         calc(var(--x) * 0.8) calc(var(--x) * -0.8) 0 #fff;
-}
-
-@keyframes darkMode {
-    0% {
-        width: calc(var(--x) * 2.5);
-        height: calc(var(--x) * 2.5);
-        background-color: var(--c0);
-    }
-    100% {
-        width: calc(var(--x) * 1.2);
-        height: calc(var(--x) * 1.2);
-        background-color: #fff;
-    }
 }
