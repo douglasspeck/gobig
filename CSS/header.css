@@ -78,7 +78,7 @@ header nav, #header-right {
 /* Dark Mode */
 
 body.dark header {
-    background-color: var(--c1);
+    background-color: var(--c0);
 }
 
 body.dark #header-right label::before {
