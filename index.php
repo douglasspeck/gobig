@@ -4,7 +4,7 @@
         $title = 'Projeto Go Big – Home';
         $keywords = 'Educação';
         $css = ['main', 'header', 'fonts', 'home'];
-        $js = [];
+        $js = ['darkmode','loading'];
         include 'PHP/head.php';
     ?>
 <body>

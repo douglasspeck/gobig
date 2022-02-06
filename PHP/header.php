@@ -4,9 +4,9 @@
     $active_page = str_replace('/', '', $active_page);
 
     echo '
-    <input type="checkbox" id="dark-mode" hidden>
+    <input type="checkbox" id="dark-mode" onclick="darkMode();" checked hidden>
     <header>
-        <img src="IMG/Logo/logo.png"></img>
+        <img id="logo" src="IMG/Logo/logo.png"></img>
         <nav id="navbar">';
 
     $pages = [
@@ -35,10 +35,7 @@
 
     echo '    
         </nav>
-        <div id="header-right">
-            <label for="dark-mode"></label>
-            <a href="" title="">Login</a>
-        </div>
+        <div id="header-right"></div>
     </header>';
 
 ?>

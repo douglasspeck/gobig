@@ -32,9 +32,9 @@ header nav, #header-right {
 }
 
 #header-right label {
-    background-color: var(--c0);
-    width: calc(2.5 * var(--x));
-    height: calc(2.5 * var(--x));
+    cursor: pointer;
+    width: calc(4 * var(--x));
+    height: calc(4 * var(--x));
     border-radius: calc(2 * var(--x));
     position: relative;
 }
@@ -42,27 +42,29 @@ header nav, #header-right {
 #header-right label::before {
     content: '';
     display: block;
-    width: calc(100% - 0.7 * var(--x));
-    height: calc(100% - 0.7 * var(--x));
-    border-radius: 50%;
+    background-color: var(--c0);
+    cursor: pointer;
+    border-radius: calc(2 * var(--x));
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    width: calc(var(--x) * 2.5);
+    height: calc(var(--x) * 2.5);
 }
 
 #header-right label::after {
+    --y: 0.5;
     content: '';
     display: block;
-    width: 60%;
-    height: 60%;
+    width: calc(1.6 * var(--x));
+    height: calc(1.6 * var(--x));
     border-radius: 50%;
     position: absolute;
-    top: 0;
-    left: 100%;
-    transform: translate(calc(-100% - 0.25 * var(--x)), calc(0.25 * var(--x)));
-    background-color: var(--c0);
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + var(--x) * var(--y)), calc(-50% - var(--x) * var(--y)));
+    box-shadow: calc(var(--x) * -1 * var(--y)) calc(var(--x) * var(--y)) 0 1px #fff;
 }
 
 #header-right a {
@@ -70,4 +72,40 @@ header nav, #header-right {
     border-radius: 1vh;
     color: #fff;
     background-color: var(--c1);
+}
+
+/* Dark Mode */
+
+body.dark #header-right label::before {
+    width: calc(var(--x) * 1.2);
+    height: calc(var(--x) * 1.2);
+    background-color: #fff;
+}
+
+body.dark #header-right label::after {
+    width: calc(var(--x) * 0.3);
+    height: calc(var(--x) * 0.3);
+    transform: translate(-50%, -50%);
+    box-shadow:
+        0 calc(var(--x) * 1.2) 0 #fff,
+        0 calc(var(--x) * -1.2) 0 #fff,
+        calc(var(--x) * 1.2) 0 0 #fff,
+        calc(var(--x) * -1.2) 0 0 #fff,
+        calc(var(--x) * 0.8) calc(var(--x) * 0.8) 0 #fff,
+        calc(var(--x) * -0.8) calc(var(--x) * 0.8) 0 #fff,
+        calc(var(--x) * -0.8) calc(var(--x) * -0.8) 0 #fff,
+        calc(var(--x) * 0.8) calc(var(--x) * -0.8) 0 #fff;
+}
+
+@keyframes darkMode {
+    0% {
+        width: calc(var(--x) * 2.5);
+        height: calc(var(--x) * 2.5);
+        background-color: var(--c0);
+    }
+    100% {
+        width: calc(var(--x) * 1.2);
+        height: calc(var(--x) * 1.2);
+        background-color: #fff;
+    }
 }

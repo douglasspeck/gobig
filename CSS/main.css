@@ -2,7 +2,8 @@
     --x: calc(0.5vh + 0.5vw);
     --c0: #222222;
     --c1: #ff6d00;
-    font-size: calc(var(--x) * 1.5)
+    font-size: calc(var(--x) * 1.5);
+    color: var(--c0);
 }
 
 body {
@@ -11,4 +12,9 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+}
+
+body.dark {
+    background-color: var(--c0);
+    color: #fff;
 }
