@@ -1,8 +1,67 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2em;
+    margin: 0;
+}
+
+p, h1 {
+    margin: 0.5em 0 0;
+}
+
+p {
+    hyphens: auto;
+}
+
+.highlight {
+    color: var(--c1);
+}
+
+.big {
+    font-size: 1.2em;
+}
+
+.bigger {
+    font-size: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: #000;
+}
+
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+    color: #fff;
+}
+
+.regular {
+    font-weight: 300;
+}
+
+h1 {
+    font-size: calc(var(--x) * 5);
+}
+
+h2 {
+    font-size: calc(var(--x) * 4);
+}
+
+h3 {
+    font-size: calc(var(--x) * 2.5);
+}
+
+h4 {
+    font-size: calc(var(--x) * 2);
+}
+
+.center {
+    text-align: center;
 }
