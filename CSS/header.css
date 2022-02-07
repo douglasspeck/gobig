@@ -11,6 +11,7 @@ header {
     font-weight: bold;
     background-color: #fff;
     z-index: 10;
+    box-shadow: 0 0 calc(var(--x) * 0.5) var(--c0);
 }
 
 header img, header nav, #header-right {
@@ -80,6 +81,7 @@ header nav, #header-right {
 
 body.dark header {
     background-color: var(--c0);
+    box-shadow: 0 0 calc(var(--x) * 0.5) #fff;
 }
 
 body.dark #header-right label::before {

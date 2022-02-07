@@ -38,11 +38,10 @@ and this project adheres to
 ┃┃ AUTHOR: Douglas Speck [@tresdoug]
 ┃┃
 ┃┃ ADDED:
-┃┃ - Footer                         -> PHP/footer.php
-┃┃ - Footer                         -> PHP/footer.php
+┃┃ - Header Shadow                  -> CSS/header.css;
 ┃┃
 ┃┃ CHANGED:
-┃┃ -
+┃┃ - Triple Paragraphs Alignment    -> CSS/home.css;
 ┃┃
 ┃┃ REMOVED:
 ┃┃ -
