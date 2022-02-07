@@ -3,7 +3,7 @@
     <?php
         $title = 'Projeto Go Big – Home';
         $keywords = 'Educação';
-        $css = ['main', 'header', 'fonts', 'home'];
+        $css = ['main', 'header', 'fonts', 'home', 'footer'];
         $js = ['darkmode','loading'];
         include 'PHP/head.php';
     ?>
@@ -21,7 +21,7 @@
         <div>
             <picture>
                 <img src="IMG/learning/learning.png"></img>
-                <figcaption>design by <strong><a href="" class="white">stories</a></strong></figcaption>
+                <figcaption>design by <a href="" class="white">stories</a></figcaption>
             </picture>
         </div>
     </section>
@@ -76,5 +76,6 @@
             </p>
         </div>
     </section>
+    <?php include 'PHP/footer.php' ?>
 </body>
 </html>

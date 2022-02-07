@@ -4,6 +4,7 @@ body {
 }
 
 a {
+    font-weight: bold;
     text-decoration: none;
     color: inherit;
 }
@@ -38,7 +39,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #000;
 }
 
-body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+body.dark h1, body.dark h2, body.dark h3,
+body.dark h4, body.dark h5, body.dark h6,
+footer h1, footer h2, footer h3, footer h4,
+footer h5, footer h6, footer p {
     color: #fff;
 }
 
@@ -64,4 +68,12 @@ h4 {
 
 .center {
     text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.upper {
+    text-transform: uppercase;
 }

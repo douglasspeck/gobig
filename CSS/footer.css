@@ -1,0 +1,43 @@
+footer {
+    margin-top: 15vh;
+    background-color: var(--c0);
+    position: relative;
+    width: 90vw;
+    padding: 0 5vw calc(var(--x) * 5);
+}
+
+footer::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 5vh solid var(--c0);
+    border-top: 5vh solid transparent;
+    border-left: 100vw solid var(--c0);
+    border-right: 100vw solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-10vh);
+}
+
+footer > * {
+    margin: calc(var(--x) * 2) 0;
+}
+
+footer hr {
+    width: calc(var(--x) * 40)
+}
+
+body.dark footer {
+    background-color: var(--c1);
+}
+
+body.dark footer::before {
+    border-bottom: 5vh solid var(--c1);
+    border-left: 100vw solid var(--c1);
+}
+
+body.dark footer .highlight {
+    color: #000;
+}
