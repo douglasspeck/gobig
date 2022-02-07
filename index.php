@@ -4,7 +4,6 @@
         $title = 'Projeto Go Big – Home';
         $keywords = 'Educação';
         $css = ['main', 'header', 'fonts', 'home', 'footer'];
-        $js = ['darkmode','loading'];
         $resources = [
             ['learning/learning.png','image','image/png'],
             ['https://www.youtube.com/embed/so8MFZfyJLQ','document']
@@ -80,6 +79,14 @@
             </p>
         </div>
     </section>
-    <?php include 'PHP/footer.php' ?>
+    <?php
+        include 'PHP/footer.php';
+        
+        $js = ['darkmode','loading'];
+        if (count($js) > 0) {echo '<!-- Scrypts -->';};
+        for ($i = 0; $i < count($js); $i++) {
+            echo '<script src="JS/' . $js[$i] . '.js"></script>';
+        };
+    ?>
 </body>
 </html>

@@ -64,10 +64,5 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') { $url = "https://"; 
         echo('<link rel="stylesheet" href="/CSS/'.$css[$i].'.css" type="text/css">');
     }
 
-    if (count($js) > 0) {echo '<!-- Scrypts -->';};
-    for ($i = 0; $i < count($js); $i++) {
-        echo '<script src="JS/' . $js[$i] . '.js"></script>';
-    };
-
     echo '</head>';
 ?>
