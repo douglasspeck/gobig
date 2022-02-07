@@ -1,7 +1,7 @@
 :root {
     --x: calc(0.5vh + 0.5vw);
     --c0: #222222;
-    --c1: #ff6d00;
+    --c1: #9900ff;
     font-size: calc(var(--x) * 1.5);
     color: var(--c0);
 }

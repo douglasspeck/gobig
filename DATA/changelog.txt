@@ -130,3 +130,4 @@ and this project adheres to
 TO DO LIST:
 
 [ ] Landing Page;
+[ ] Video for Landing Page;
