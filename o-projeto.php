@@ -7,7 +7,8 @@
         $js = ['darkmode','loading'];
         include 'PHP/head.php';
     ?>
-<body>
-
+<body hidden>
+    <?php include 'PHP/header.php'; ?>
+    <?php include 'PHP/footer.php'; ?>
 </body>
 </html>

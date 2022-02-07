@@ -11,6 +11,8 @@ window.onload = function() {
 function loading() {
 
     var bodyElements = document.body.children;
+
+    document.body.removeAttribute('hidden');
     
     for (let i = 0; i < bodyElements.length; i++) {
         fadeIn(bodyElements[i], 1000);
