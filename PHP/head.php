@@ -25,7 +25,8 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') { $url = "https://"; 
         $isLocal = true;
     }
 
-    echo '<head>
+    echo '
+        <head>
             <title>' . $title . '</title>
             
             <!-- META TAGS -->
@@ -40,20 +41,33 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') { $url = "https://"; 
             <meta name="keywords" content="' . $keywords . '">
             <link rel="canonical" href="' . $link . '">
 
-        <!-- Favicons -->
+            <!-- Resources -->
+            <link rel="preload" href="/IMG/Logo/logo.png" as="image" type="image/png">
+            <link rel="preload" href="/IMG/Logo/logo-dark.png" as="image" type="image/png">';
 
-        <!-- Fonts -->
+    for($i = 0; $i < count($resources); $i++) {
+        echo '<link rel="preload" href="/IMG/' . $resources[$i][0] . '" as="'. $resources[$i][1] .'"';
+        
+        if (count($resources[$i]) > 1) { echo 'type="'. $resources[$i][2] .'"'; } ;
+       
+        echo '>';
+    }    
+
+    echo '
+            <!-- Favicons -->
+
+            <!-- Fonts -->
             <link href="//fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">';
 
-        if (count($css) > 0) {echo '<!-- Stylesheets -->';};
-        for($i = 0; $i < count($css); $i++) {
-            echo('<link rel="stylesheet" href="/CSS/'.$css[$i].'.css" type="text/css">');
-        }
+    if (count($css) > 0) {echo '<!-- Stylesheets -->';};
+    for($i = 0; $i < count($css); $i++) {
+        echo('<link rel="stylesheet" href="/CSS/'.$css[$i].'.css" type="text/css">');
+    }
 
-        if (count($js) > 0) {echo '<!-- Scrypts -->';};
-        for ($i = 0; $i < count($js); $i++) {
-            echo '<script src="JS/' . $js[$i] . '.js"></script>';
-        };
+    if (count($js) > 0) {echo '<!-- Scrypts -->';};
+    for ($i = 0; $i < count($js); $i++) {
+        echo '<script src="JS/' . $js[$i] . '.js"></script>';
+    };
 
-        echo '</head>';
-    ?>
+    echo '</head>';
+?>

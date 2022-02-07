@@ -5,6 +5,10 @@
         $keywords = 'Educação';
         $css = ['main', 'header', 'fonts', 'home', 'footer'];
         $js = ['darkmode','loading'];
+        $resources = [
+            ['learning/learning.png','image','image/png'],
+            ['https://www.youtube.com/embed/so8MFZfyJLQ','document']
+        ];
         include 'PHP/head.php';
     ?>
 <body hidden>

@@ -5,6 +5,7 @@
         $keywords = 'Educação';
         $css = ['main', 'header', 'fonts', 'footer'];
         $js = ['darkmode','loading'];
+        $resources = [];
         include 'PHP/head.php';
     ?>
 <body hidden>
