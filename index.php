@@ -5,8 +5,10 @@
         $keywords = 'Educação';
         $css = ['main', 'header', 'fonts', 'home', 'footer'];
         $resources = [
-            ['learning/learning.png','image','image/png'],
-            ['https://www.youtube.com/embed/so8MFZfyJLQ','document']
+            ['preload','image','/IMG/Logo/logo','.png',[50,399]],
+            ['preload','image','/IMG/Logo/logo-dark','.png',[50,399]],
+            ['preload','image','/IMG/learning/learning','.png',[200,458,682,875,1034,1400]],
+            ['prefetch','https://www.youtube.com/embed/so8MFZfyJLQ']
         ];
         include 'PHP/head.php';
     ?>
@@ -23,7 +25,12 @@
         </div>
         <div>
             <picture>
-                <img src="IMG/learning/learning.png"></img>
+                <?php 
+                    $image = 'learning/learning';
+                    $sizes = [200,458,682,875,1034,1400];
+                    $alt = 'Ilustração de uma mulher estudando';
+                    include 'PHP/image.php';
+                ?>
                 <figcaption>design by <a href="" class="white">stories</a></figcaption>
             </picture>
         </div>
@@ -81,7 +88,7 @@
     </section>
     <?php
         include 'PHP/footer.php';
-        
+
         $js = ['darkmode','loading'];
         if (count($js) > 0) {echo '<!-- Scrypts -->';};
         for ($i = 0; $i < count($js); $i++) {

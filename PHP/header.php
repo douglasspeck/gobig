@@ -5,9 +5,16 @@
 
     echo '
     <input type="checkbox" id="dark-mode" onclick="darkMode();" checked hidden>
-    <header>
-        <img id="logo" src="IMG/Logo/logo.png"></img>
-        <nav id="navbar">';
+    <header>';
+    
+    $image = 'Logo/logo';
+    $sizes = [50,399];
+    $alt = 'Logo do Projeto Go Big';
+    $id = 'logo';
+    $class = '';
+    include 'image.php';
+
+    echo '<nav id="navbar">';
 
     $pages = [
         ['Home', '/', 'Página Inicial'],

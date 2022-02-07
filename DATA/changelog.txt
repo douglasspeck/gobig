@@ -32,6 +32,22 @@ and this project adheres to
 *     ┃  ┗━┓┃ ┏┓ ┃┃ ┏┓ ┃┃ ┓  ┃┃ ┏┓ ┃┃  ━┻┓┃ ┗━━┓┃ ┗┛ ┃┃ ┏┓ ┃     *
 *     ┗━━━━┛┗━┛┗━┛┗━┛┗━┛┗━┛┗━┛┗━━━━┛┗━━━━┛┗━━━━┛┗━━━━┛┗━━━━┛     *
 
+┏━ 0.4.0 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2021-02-07 ━━━━━┓
+┃┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┃┃ AUTHOR: Douglas Speck [@tresdoug]
+┃┃
+┃┃ ADDED:
+┃┃ - Preloads and Prefetches        -> PHP/head.php;
+┃┃
+┃┃ CHANGED:
+┃┃ - Images Sizes                   -> PHP/head.php,
+┃┃                                     index.php;
+┃┃
+┃┃ REMOVED:
+┃┃ -
+┃┃
+┗┛
+
 ┏━ 0.3.4 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2021-02-07 ━━━━━┓
 ┃┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ┃┃ AUTHOR: Douglas Speck [@tresdoug]
@@ -181,4 +197,5 @@ and this project adheres to
 TO DO LIST:
 
 [ ] Landing Page;
+[ ] Change Footer declination;
 [ ] Video for Landing Page;

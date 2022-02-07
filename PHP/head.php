@@ -41,16 +41,24 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') { $url = "https://"; 
             <meta name="keywords" content="' . $keywords . '">
             <link rel="canonical" href="' . $link . '">
 
-            <!-- Resources -->
-            <link rel="preload" href="/IMG/Logo/logo.png" as="image" type="image/png">
-            <link rel="preload" href="/IMG/Logo/logo-dark.png" as="image" type="image/png">';
+            <!-- Resources -->';
 
     for($i = 0; $i < count($resources); $i++) {
-        echo '<link rel="preload" href="/IMG/' . $resources[$i][0] . '" as="'. $resources[$i][1] .'"';
-        
-        if (count($resources[$i]) > 1) { echo 'type="'. $resources[$i][2] .'"'; } ;
-       
-        echo '>';
+        if ($resources[$i][0] == 'preload') {
+            echo '
+                <link rel="preload" as="' . $resources[$i][1] . '"';
+            if ($resources[$i][4]) {
+                echo ' href="' . $resources[$i][2] . '_' . $resources[$i][4][count($resources[$i][4]) - 1] . $resources[$i][3] . '"';
+                echo ' imgsrcset="';
+                for ($j = 0; $j < count($resources[$i][4]); $j++) {
+                    echo $resources[$i][2].'_'.$resources[$i][4][$j].$resources[$i][3].' '.$resources[$i][4][$j].'w';
+                    if ($j < count($resources[$i][4]) - 1) { echo ', '; };
+                }
+                echo '">';
+            }
+        } else if ($resources[$i][0] == 'prefetch') {
+            echo '<link rel="prefetch" href="' . $resources[$i][1] . '">';
+        }
     }    
 
     echo '
@@ -61,8 +69,13 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') { $url = "https://"; 
 
     if (count($css) > 0) {echo '<!-- Stylesheets -->';};
     for($i = 0; $i < count($css); $i++) {
+        echo('<link rel="preload" as="style" onload="this.rel = \'stylesheet\'; this.removeAttribute(\'as\'); this.removeAttribute(\'onload\');" href="/CSS/'.$css[$i].'.css" type="text/css">');
+    }
+    echo '<noscript>';
+    for($i = 0; $i < count($css); $i++) {
         echo('<link rel="stylesheet" href="/CSS/'.$css[$i].'.css" type="text/css">');
     }
+    echo '</noscript>';
 
     echo '</head>';
 ?>

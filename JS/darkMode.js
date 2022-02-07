@@ -21,7 +21,15 @@ function darkModeSetup() {
     // Changes the background color of body according to the state of Dark Mode
     if (isDark == true) {
         document.body.className = "dark";
-        document.getElementById("logo").setAttribute('src','IMG/Logo/logo-dark.png');
+        
+        let src = document.getElementById('logo').getAttribute('src');
+        src = src.replace('logo','logo-dark');
+        document.getElementById('logo').setAttribute('src',src);
+
+        let srcset = document.getElementById('logo').getAttribute('srcset');
+        srcset = srcset.replaceAll('logo','logo-dark');
+        document.getElementById('logo').setAttribute('srcset',srcset);
+
     } else {
         document.getElementById("dark-mode").checked = false;
     }
@@ -40,11 +48,27 @@ function darkMode() {
     // Changes the background color of body according to the state of Dark Mode
     if (isDark == true) {
         document.body.className = "dark";
-        document.getElementById("logo").setAttribute('src','IMG/Logo/logo-dark.png');
+
+        let src = document.getElementById('logo').getAttribute('src');
+        src = src.replace('logo','logo-dark');
+        document.getElementById('logo').setAttribute('src',src);
+
+        let srcset = document.getElementById('logo').getAttribute('srcset');
+        srcset = srcset.replaceAll('logo','logo-dark');
+        document.getElementById('logo').setAttribute('srcset',srcset);
+
         console.log("Dark Mode is enabled.");
     } else {
-        document.body.className = "";
-        document.getElementById("logo").setAttribute('src','IMG/Logo/logo.png');
+        document.body.removeAttribute('class');
+        
+        let src = document.getElementById('logo').getAttribute('src');
+        src = src.replace('logo-dark','logo');
+        document.getElementById('logo').setAttribute('src',src);
+
+        let srcset = document.getElementById('logo').getAttribute('srcset');
+        srcset = srcset.replaceAll('logo-dark','logo');
+        document.getElementById('logo').setAttribute('srcset',srcset);
+
         console.log("Dark Mode is disabled.");
     }
 
