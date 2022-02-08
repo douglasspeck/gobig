@@ -5,7 +5,8 @@
 
     echo '
     <input type="checkbox" id="dark-mode" onclick="darkMode();" checked hidden>
-    <header>';
+    <header>
+        <a href="/" title="Página Inicial">';
     
     $image = 'Logo/logo';
     $sizes = [50,399];
@@ -14,7 +15,8 @@
     $class = '';
     include 'image.php';
 
-    echo '<nav id="navbar">';
+    echo '</a>
+        <nav id="navbar">';
 
     $pages = [
         ['Home', '/', 'Página Inicial'],

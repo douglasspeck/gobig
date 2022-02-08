@@ -31,7 +31,7 @@
                     $alt = 'Ilustração de uma mulher estudando';
                     include 'PHP/image.php';
                 ?>
-                <figcaption>design by <a href="" class="white">stories</a></figcaption>
+                <figcaption>design by <a href="https://www.freepik.com/vectors/people" target="_blank" title="stories @ freepik.com" class="white">stories</a></figcaption>
             </picture>
         </div>
     </section>

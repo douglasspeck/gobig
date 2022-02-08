@@ -12,11 +12,12 @@
         </h3>
         <hr>
         <h4>
-            <a href="https://instagram.com/projetogobig" title="Siga-nos no Instagram">instagram</a> <span class="highlight">•</span> <a href="https://facebook.com/projetogobig" title="Acompanhe-nos no Facebook">facebook</a> <span class="highlight">•</span>
-            <a href="mailto:contato@projetogobig.com.br" title="Nosso E-mail de Contato">contato@projetogobig.com.br</a>
+            <a href="https://instagram.com/projetogobig" target="_blank" title="Siga-nos no Instagram">instagram</a> <span class="highlight">•</span>
+            <a href="https://facebook.com/projetogobig"  target="_blank" title="Acompanhe-nos no Facebook">facebook</a> <span class="highlight">•</span>
+            <a href="mailto:contato@projetogobig.com.br" target="_blank" title="Nosso E-mail de Contato">contato@projetogobig.com.br</a>
         </h4>
         <p class="right">
-            site orgulhosamente <br class="breakpoint"> desenvolvido por <a class="highlight" href="https://github.com/douglasspeck" title="Douglas Speck no GitHub">@tresdoug</a>
+            site orgulhosamente <br class="breakpoint"> desenvolvido por <a class="highlight" href="https://github.com/douglasspeck" target="_blank" title="Douglas Speck no GitHub">@tresdoug</a>
         </p>
     </footer>';
 

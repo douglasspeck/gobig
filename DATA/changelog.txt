@@ -29,13 +29,14 @@ and this project adheres to
 TO DO LIST:
 
 [x] Change Footer declination;
-[ ] Transform the logo into a link;
+[x] Transform the logo into a link;
 [ ] Design the remaining pages;
 [ ] Video for Landing Page;
 [ ] Read-me;
 [ ] GitHub Description;
 [ ] Navbar underscore;
 [ ] Favicon;
+[ ] Mobile Landpage;
 
 *     ┏━━━━┓                                                     *
 *     ┃  ┏━┛┏━┓┏━┓┏━━━━┓┏━┓┏━┓┏━━━━┓┏━━━━┓┏━┓   ┏━━━━┓┏━━━━┓     *
