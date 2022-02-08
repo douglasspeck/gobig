@@ -10,7 +10,7 @@ window.onload = function() {
 // Applies the Fade In Effect for every element in the page
 function loading() {
 
-    var bodyElements = document.body.children;
+    var bodyElements = document.getElementsByTagName('main')[0].children;
 
     document.body.removeAttribute('hidden');
     

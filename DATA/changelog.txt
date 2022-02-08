@@ -30,7 +30,7 @@ TO DO LIST:
 
 [x] Change Footer declination;
 [x] Transform the logo into a link;
-[ ] Design the remaining pages;
+[x] Design the remaining pages;
 [ ] Video for Landing Page;
 [ ] Read-me;
 [ ] GitHub Description;
@@ -44,6 +44,29 @@ TO DO LIST:
 *     ┃  ┗━┓┃ ┏┓ ┃┃ ┏┓ ┃┃ ┓  ┃┃ ┏┓ ┃┃  ━┻┓┃ ┗━━┓┃ ┗┛ ┃┃ ┏┓ ┃     *
 *     ┗━━━━┛┗━┛┗━┛┗━┛┗━┛┗━┛┗━┛┗━━━━┛┗━━━━┛┗━━━━┛┗━━━━┛┗━━━━┛     *
 
+┏━ 0.5.0 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2021-02-08 ━━━━━┓
+┃┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┃┃ AUTHOR: Douglas Speck [@tresdoug]
+┃┃
+┃┃ ADDED:
+┃┃ - About Page content             -> o-projeto.php;
+┃┃
+┃┃ - <details> styles               -> CSS/main.css;
+┃┃
+┃┃ CHANGED:
+┃┃ - Switched Header Shadow Colors  -> CSS/header.css;
+┃┃
+┃┃ - Moved some styles from
+┃┃   CSS/home.css to CSS/main.css;
+┃┃
+┃┃ - Fade In is now applied to
+┃┃   the <main> tag, instead of
+┃┃   being applied to the <body>    -> JS/loading.js;
+┃┃
+┃┃ – Made Changelog Clearers        -> DATA/changelog.txt;
+┃┃
+┗┛
+
 ┏━ 0.4.0 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2021-02-07 ━━━━━┓
 ┃┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ┃┃ AUTHOR: Douglas Speck [@tresdoug]
@@ -55,26 +78,17 @@ TO DO LIST:
 ┃┃ - Images Sizes                   -> PHP/head.php,
 ┃┃                                     index.php;
 ┃┃
-┃┃ REMOVED:
-┃┃ -
-┃┃
 ┗┛
 
 ┏━ 0.3.4 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2021-02-07 ━━━━━┓
 ┃┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ┃┃ AUTHOR: Douglas Speck [@tresdoug]
 ┃┃
-┃┃ ADDED:
-┃┃ -
-┃┃
 ┃┃ CHANGED:
 ┃┃ - Scrypts Position               -> PHP/head.php,
 ┃┃                                     index.php,
 ┃┃                                     o-projeto.php,
 ┃┃                                     contato.php;
-┃┃
-┃┃ REMOVED:
-┃┃ -
 ┃┃
 ┗┛
 
@@ -87,12 +101,6 @@ TO DO LIST:
 ┃┃                                     index.php,
 ┃┃                                     o-projeto.php,
 ┃┃                                     contato.php;
-┃┃
-┃┃ CHANGED:
-┃┃ -
-┃┃
-┃┃ REMOVED:
-┃┃ -
 ┃┃
 ┗┛
 
@@ -107,9 +115,6 @@ TO DO LIST:
 ┃┃ CHANGED:
 ┃┃ - New Main Color [#9900ff]       -> CSS/main.css;
 ┃┃
-┃┃ REMOVED:
-┃┃ -
-┃┃
 ┗┛
 
 ┏━ 0.3.1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2021-02-06 ━━━━━┓
@@ -122,9 +127,6 @@ TO DO LIST:
 ┃┃ CHANGED:
 ┃┃ - Triple Paragraphs Alignment    -> CSS/home.css;
 ┃┃
-┃┃ REMOVED:
-┃┃ -
-┃┃
 ┗┛
 
 ┏━ 0.3.0 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2021-02-06 ━━━━━┓
@@ -136,12 +138,6 @@ TO DO LIST:
 ┃┃                                     CSS/footer.css,
 ┃┃                                     CSS/fonts.css;
 ┃┃
-┃┃ CHANGED:
-┃┃ -
-┃┃
-┃┃ REMOVED:
-┃┃ -
-┃┃
 ┗┛
 
 ┏━ 0.2.0 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2021-02-06 ━━━━━┓
@@ -152,13 +148,11 @@ TO DO LIST:
 ┃┃ - Dark Mode                      -> JS/darkmode.js,
 ┃┃                                     CSS/header.css,
 ┃┃                                     CSS/main.css;
+┃┃
 ┃┃ - Loading Animation              -> JS/loading.js;
 ┃┃
 ┃┃ CHANGED:
 ┃┃ - Header Responsivity            -> CSS/header.css;
-┃┃
-┃┃ REMOVED:
-┃┃ -
 ┃┃
 ┗┛
 
@@ -169,14 +163,9 @@ TO DO LIST:
 ┃┃ ADDED:
 ┃┃ - Basic Styles                   -> CSS/fonts.css,
 ┃┃                                     CSS/main.css;
+┃┃
 ┃┃ - Header                         -> PHP/header.php,
 ┃┃                                     CSS/header.css;
-┃┃
-┃┃ CHANGED:
-┃┃ -
-┃┃
-┃┃ REMOVED:
-┃┃ -
 ┃┃
 ┗┛
 
@@ -186,22 +175,23 @@ TO DO LIST:
 ┃┃
 ┃┃ ADDED:
 ┃┃ - Landing Page (blank)           -> index.php;
+┃┃
 ┃┃ - Codebase Setup                 -> CSS, DATA, IMG, JS, PHP;
+┃┃
 ┃┃ - Main Stylesheets (blank)       -> CSS/fonts.css,
 ┃┃                                     CSS/header.css,
 ┃┃                                     CSS/home.css,
 ┃┃                                     CSS/main.css;
+┃┃
 ┃┃ - Images for the Landing Page    -> IMG/learning/**;
+┃┃
 ┃┃ - Attribuition Document (drafts) -> DATA/attribuition.txt;
+┃┃
 ┃┃ - Logo Images                    -> IMG/Logo/logo.png,
 ┃┃                                     IMG/Logo/logo-dark.png;
+┃┃
 ┃┃ - Changelog                      -> DATA/changelog.txt;
+┃┃
 ┃┃ - Git Ignore (.DS_Store)         -> .gitignore;
-┃┃
-┃┃ CHANGED:
-┃┃ -
-┃┃
-┃┃ REMOVED:
-┃┃ -
 ┃┃
 ┗┛
