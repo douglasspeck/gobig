@@ -11,14 +11,15 @@ footer::before {
     display: block;
     width: 0;
     height: 0;
-    border-bottom: 5vh solid var(--c0);
-    border-top: 5vh solid transparent;
-    border-left: 100vw solid var(--c0);
-    border-right: 100vw solid transparent;
+    border-bottom: 10vh solid var(--c0);
+    border-top: 10vh solid transparent;
+    border-left: none;
+    border-right: 100vw solid var(--c0);
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(-9vh);
+    transform: translateY(-14vh);
+    z-index: -5;
 }
 
 footer > * {
@@ -35,7 +36,7 @@ body.dark footer {
 
 body.dark footer::before {
     border-bottom: 5vh solid var(--c1);
-    border-left: 100vw solid var(--c1);
+    border-right: 100vw solid var(--c1);
 }
 
 body.dark footer .highlight {
