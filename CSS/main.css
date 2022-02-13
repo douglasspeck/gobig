@@ -2,6 +2,7 @@
     --x: calc(0.5vh + 0.5vw);
     --c0: #222222;
     --c1: #9900ff;
+    --c2: #3d00ff;
     font-size: calc(var(--x) * 1.5);
     color: var(--c0);
 }
@@ -17,6 +18,10 @@ body {
 body.dark {
     background-color: var(--c0);
     color: #fff;
+}
+
+main {
+    min-height: 85vh;
 }
 
 section {
@@ -175,4 +180,35 @@ body.dark .tag.highlight-bg {
 
 .tag.highlight-bg::before {
     content: '';
+}
+
+form, input, button, textarea {
+    font-family: inherit;
+    width: 100%;
+}
+
+input, button, textarea {
+    width: calc(100% - 2em);
+    border: none;
+    padding: 0 1em;
+    height: calc(var(--x) * 3);
+    border-radius: 2em;
+    margin: auto;
+}
+
+form {
+    height: calc(var(--x) * 30);
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: calc(var(--x) * 2);
+}
+
+form > textarea {
+    padding: 1em;
+    border-radius: 1em;
+    height: calc(var(--x) * 15 - 2em);
+}
+
+form > button {
+    width: 50%;
 }

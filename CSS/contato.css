@@ -1,0 +1,24 @@
+#contact-wrapper {
+    background: linear-gradient(to bottom right, var(--c1), var(--c2));
+    display: flex;
+    width: calc(var(--x) * 80);
+    height: calc(var(--x) * 45);
+    padding: calc(var(--x) * 5);
+    border-radius: calc(var(--x) * 3);
+    margin: auto;
+}
+
+#contact-wrapper > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(var(--x) * 45);
+    width: 50%;
+}
+
+#contact-wrapper h1 {
+    color: #fff;
+    margin-bottom: calc(var(--x) * 3);
+    width: 100%;
+}
