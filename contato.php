@@ -13,7 +13,8 @@
         <div id="contact-wrapper">
             <div>
                 <div class="mail-icon">
-                    
+                    <span class="top"></span>
+                    <span class="bottom"></span>
                 </div>
             </div>
             <div>

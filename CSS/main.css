@@ -194,6 +194,7 @@ input, button, textarea {
     height: calc(var(--x) * 3);
     border-radius: 2em;
     margin: auto;
+    font-size: 0.8em;
 }
 
 form {
@@ -207,8 +208,10 @@ form > textarea {
     padding: 1em;
     border-radius: 1em;
     height: calc(var(--x) * 15 - 2em);
+    resize: none;
 }
 
 form > button {
     width: 50%;
+    font-weight: bold;
 }

@@ -1,24 +1,122 @@
+:root {
+    --y: calc(var(--x) * 20);
+    --g1: #f0f0f0;
+    --g2: #dddddd;
+    --g3: #666666;
+}
+
 #contact-wrapper {
     background: linear-gradient(to bottom right, var(--c1), var(--c2));
     display: flex;
     width: calc(var(--x) * 80);
     height: calc(var(--x) * 45);
     padding: calc(var(--x) * 5);
+    column-gap: calc(var(--x) * 5);
     border-radius: calc(var(--x) * 3);
     margin: auto;
+    overflow: hidden;
+    box-shadow: var(--c0) calc(var(--x) / 3) calc(var(--x) / 3) var(--x);
 }
 
 #contact-wrapper > div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     height: calc(var(--x) * 45);
     width: 50%;
 }
 
 #contact-wrapper h1 {
     color: #fff;
-    margin-bottom: calc(var(--x) * 3);
+    margin: 0 0 calc(var(--x) * 3);
     width: 100%;
+}
+
+.mail-icon {
+    display: block;
+    background-color: var(--g2);
+    width: var(--y);
+    height: calc(var(--y) * 8/11);
+    border-radius: calc(var(--y) * 0.05);
+    position: relative;
+    transform: rotate(-15deg);
+    box-shadow: #fff 0 0  var(--y) calc(var(--y) / 6);
+}
+
+.mail-icon .bottom {
+    display: block;
+    width: var(--y);
+    height: calc(var(--y) * 8/55);
+    background-color: var(--g1);
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 calc(var(--y) * 0.05) calc(var(--y) * 0.05);
+}
+
+.mail-icon .bottom::before  {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+    border-style: solid;
+    border-width: 0 calc(var(--y) / 2) calc(var(--y) * 16/55) calc(var(--y) / 2);
+    border-color: transparent transparent var(--g1) transparent;
+}
+
+.mail-icon .top {
+    display: block;
+    width: var(--y);
+    height: calc(var(--y) * 8/55);
+    background-color: var(--g3);
+    position: absolute;
+    top: 0;
+    border-radius: calc(var(--y) * 0.05) calc(var(--y) * 0.05) 0 0;
+    z-index: 1;
+}
+
+.mail-icon .top::before  {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(50%);
+    border-style: solid;
+    border-width: calc(var(--y) * 16/55) calc(var(--y) / 2) 0 calc(var(--y) / 2);
+    border-color: var(--g3) transparent transparent transparent;
+}
+
+body.dark #contact-wrapper {
+    background: #fff;
+    box-shadow: var(--g3) calc(var(--x) / 3) calc(var(--x) / 3) var(--x);
+}
+
+body.dark #contact-wrapper h1 {
+    color: var(--c0);
+}
+
+body.dark #contact-wrapper input, body.dark #contact-wrapper textarea {
+    background: var(--g1);
+}
+
+body.dark #contact-wrapper button {
+    background: var(--c1);
+    color: #fff;
+}
+
+body.dark .mail-icon {
+    box-shadow: var(--c1) 0 0 var(--y) calc(var(--y) / 6);
+}
+
+body.dark .mail-icon .top {
+    background-color: var(--c1);
+}
+
+body.dark .mail-icon .top::before {
+    border-color: var(--c1) transparent transparent transparent;
 }
