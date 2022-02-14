@@ -31,6 +31,7 @@ TO DO LIST:
 [x] Change Footer declination;
 [x] Transform the logo into a link;
 [x] Design the remaining pages;
+[x] Finish Desktop Website;
 [ ] Video for Landing Page;
 [ ] Read-me;
 [ ] GitHub Description;

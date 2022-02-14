@@ -19,10 +19,10 @@
             </div>
             <div>
                 <h1>Escreva-nos!</h1>
-                <form action="">
-                    <input type="text" name="nome" placeholder="Seu Nome da Silva">
-                    <input type="text" name="email" placeholder="exemplo@seuemail.com">
-                    <textarea name="message" id="" cols="30" placeholder="Escreva sua mensagem aqui."></textarea>
+                <form method="post" action="PHP/sendEmail.php">
+                    <input required type="text" name="nome" placeholder="Seu Nome da Silva">
+                    <input required type="text" name="email" placeholder="exemplo@seuemail.com">
+                    <textarea required name="message" placeholder="Escreva sua mensagem aqui."></textarea>
                     <button type="submit">Enviar</button>
                 </form>
             </div>
