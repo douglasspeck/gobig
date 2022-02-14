@@ -20,7 +20,7 @@
             <div>
                 <h1>Escreva-nos!</h1>
                 <form method="post" action="PHP/sendEmail.php">
-                    <input required type="text" name="nome" placeholder="Seu Nome da Silva">
+                    <input required type="text" name="name" placeholder="Seu Nome da Silva">
                     <input required type="text" name="email" placeholder="exemplo@seuemail.com">
                     <textarea required name="message" placeholder="Escreva sua mensagem aqui."></textarea>
                     <button type="submit">Enviar</button>
