@@ -132,12 +132,12 @@ details[open] > p, details[open] > .tags {
 
 details:not([open]) > summary::before {
     transform: rotate(0deg);
-    transition: transform 0.5s ease-in;
+    transition: transform 0.3s ease-in;
 }
 
 details[open] > summary::before {
     transform: rotate(90deg);
-    transition: transform 0.5s ease-in;
+    transition: transform 0.3s ease-in;
 }
 
 .tags {

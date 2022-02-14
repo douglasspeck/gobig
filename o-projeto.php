@@ -27,7 +27,7 @@
         <section>
             <div>
                 <h2 class="center">Quem Procuramos?</h2>
-                <details>
+                <details open>
                     <summary><span class="highlight">Pupilos</span></summary>
                     <p>O aluno precisa vir de um ensino de baixo engajamento com extracurriculares (falta de incentivo, aulas e apoio), especialmente se vier de uma escola pública. Não há restrição de idade ou local, trabalhamos remotamente e disponibilizamos materiais e suporte online!</p>
                     <div class="tags">
@@ -40,7 +40,7 @@
                         <span class="tag highlight-bg"><a href="contato.php">quero ser pupilo!</a></span>
                     </div>
                 </details>
-                <details open>
+                <details>
                     <summary><span class="highlight">Voluntários e Colaboradores</span></summary>
                     <p>Procuramos voluntários com disposição para ajudar e experiência na área que irá cooperar. Não precisa ser medalhista nem destaque, basta querer compartilhar conhecimento! Nos adequaremos à sua carga horária e você pode nos ajudar a coordenar as turmas, escrever materiais, compartilhar conteúdos, dar aulas de revisão, elaborar listas e muito mais!</p>
                     <div class="tags">
