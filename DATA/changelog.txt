@@ -45,6 +45,30 @@ TO DO LIST:
 *     ┃  ┗━┓┃ ┏┓ ┃┃ ┏┓ ┃┃ ┓  ┃┃ ┏┓ ┃┃  ━┻┓┃ ┗━━┓┃ ┗┛ ┃┃ ┏┓ ┃     *
 *     ┗━━━━┛┗━┛┗━┛┗━┛┗━┛┗━┛┗━┛┗━━━━┛┗━━━━┛┗━━━━┛┗━━━━┛┗━━━━┛     *
 
+┏━ 0.7.0 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2021-02-17 ━━━━━┓
+┃┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┃┃ AUTHOR: Douglas Speck [@tresdoug]
+┃┃
+┃┃ ADDED:
+┃┃ - Mobile Menu                    -> PHP/header.php,
+┃┃                                     CSS/header.css;
+┃┃
+┃┃ - Started Email System           -> PHP/createEmail,
+┃┃                                     PHP/sendEmail,
+┃┃                                     contato.php;
+┃┃
+┃┃ - Query Strings in Links         -> PHP/head.php,
+┃┃                                     index.php,
+┃┃                                     contato.php,
+┃┃                                     o-projeto.php;
+┃┃
+┃┃ CHANGED:
+┃┃ - Fixed Link Letter case         -> index.php,
+┃┃                                     contato.php,
+┃┃                                     o-projeto.php;
+┃┃
+┗┛
+
 ┏━ 0.6.1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2021-02-13 ━━━━━┓
 ┃┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ┃┃ AUTHOR: Douglas Speck [@tresdoug]
