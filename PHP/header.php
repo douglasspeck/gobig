@@ -12,8 +12,7 @@
     echo '
     <input type="checkbox" id="dark-mode" onclick="darkMode();" checked hidden>
     <input type="checkbox" id="toggle-menu" hidden>
-    <label for="toggle-menu">
-        <nav>';
+    <label id="menu-label" for="toggle-menu">';
     
         for ($i = 0; $i < count($pages); $i++) {
             
@@ -35,7 +34,8 @@
 
         };
     
-    echo '</nav></label>
+    echo '<div class="menu login"><a href="/">Login</a></div>
+        </label>
     <header>
         <a href="/" title="Página Inicial">';
     

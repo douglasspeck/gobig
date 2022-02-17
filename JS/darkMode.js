@@ -14,7 +14,7 @@ function darkModeSetup() {
     darkSwitch.setAttribute('for', 'dark-mode');
 
     var loginButton = document.createElement('a');
-    loginButton.setAttribute('title', '');
+    loginButton.setAttribute('title', 'Entrar na Plataforma');
     loginButton.setAttribute('href', '');
     loginButton.innerHTML = 'Login';
 
@@ -34,8 +34,14 @@ function darkModeSetup() {
         document.getElementById("dark-mode").checked = false;
     }
 
-    document.getElementById("header-right").appendChild(darkSwitch);
-    document.getElementById("header-right").appendChild(loginButton);
+    if (window.matchMedia("(orientation: portrait)").matches) {
+        document.getElementById("menu-label").insertBefore(darkSwitch, document.getElementById("menu-label").firstChild);
+        console.log('Mobile');
+    } else {
+        document.getElementById("header-right").appendChild(darkSwitch);
+        document.getElementById("header-right").appendChild(loginButton);
+        console.log('Not Mobile');
+    }
 
     // Logs the Dark Mode state
     console.log("Dark Mode Enabled by Default: " + isDark);

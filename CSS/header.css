@@ -115,6 +115,7 @@ body.dark #header-right label::after {
 
     label[for="toggle-menu"] {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         width: calc(var(--x) * 9);
@@ -139,6 +140,35 @@ body.dark #header-right label::after {
         width: 100vw;
         height: 100vh;
         border-radius: 0;
+    }
+
+    label[for="toggle-menu"]::after,
+    label[for="toggle-menu"]::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #000;
+        width: 0;
+        height: 0;
+        transition: all 0.5s ease-in;
+    }
+
+    label[for="toggle-menu"]::before {
+        transform: rotate(-45deg);
+    }
+
+    label[for="toggle-menu"]::after {
+        transform: rotate(45deg);
+    }
+
+    #toggle-menu:checked ~ label[for="toggle-menu"]::after,
+    #toggle-menu:checked ~ label[for="toggle-menu"]::before {
+        width: calc(var(--x) * 4);
+        height: calc(var(--x) * 1);
+        top: calc(var(--x) * 8);
+        right: calc(var(--x) * 5);
     }
 
     .menu {
@@ -166,6 +196,10 @@ body.dark #header-right label::after {
         font-size: 0;
     }
 
+    #toggle-menu:not(:checked) ~ label .menu.login {
+        opacity: 0;
+    }
+
     #toggle-menu:not(:checked) ~ label .menu:not(:last-child) { margin-bottom: calc(var(--x) * 0.8); }
 
     #toggle-menu:checked ~ label .menu {
@@ -175,6 +209,13 @@ body.dark #header-right label::after {
         width: calc(var(--x) * 40);
         height: calc(var(--x) * 7);
         font-size: calc(var(--x) * 4);
+    }
+    
+    #toggle-menu:checked ~ label .menu.login {
+        width: calc(var(--x) * 25);
+        border: none;
+        background-color: var(--c1);
+        color: #fff;
     }
 
     #toggle-menu:checked ~ label .menu:not(:last-child) { margin-bottom: calc(var(--x) * 7); }
