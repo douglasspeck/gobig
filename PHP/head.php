@@ -69,11 +69,11 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') { $url = "https://"; 
 
     if (count($css) > 0) {echo '<!-- Stylesheets -->';};
     for($i = 0; $i < count($css); $i++) {
-        echo('<link rel="preload" as="style" onload="this.rel = \'stylesheet\'; this.removeAttribute(\'as\'); this.removeAttribute(\'onload\');" href="/CSS/'.$css[$i].'.css" type="text/css">');
+        echo('<link rel="preload" as="style" onload="this.rel = \'stylesheet\'; this.removeAttribute(\'as\'); this.removeAttribute(\'onload\');" href="/CSS/'.$css[$i].'.css?t=' . date('YmdHis') . '" type="text/css">');
     }
     echo '<noscript>';
     for($i = 0; $i < count($css); $i++) {
-        echo('<link rel="stylesheet" href="/CSS/'.$css[$i].'.css" type="text/css">');
+        echo('<link rel="stylesheet" href="/CSS/'.$css[$i].'.css?t=' . date('YmdHis') . '" type="text/css">');
     }
     echo '</noscript>';
 
