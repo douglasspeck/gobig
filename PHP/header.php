@@ -12,30 +12,6 @@
     echo '
     <input type="checkbox" id="dark-mode" onclick="darkMode();" checked hidden>
     <input type="checkbox" id="toggle-menu" hidden>
-    <label id="menu-label" for="toggle-menu">';
-    
-        for ($i = 0; $i < count($pages); $i++) {
-            
-            echo '<div class="menu';
-
-            if ($pages[$i][1] == $active_page || $pages[$i][1] == '/' && $active_page == '') { echo ' active'; }
-            
-            echo '"><a href="' . $pages[$i][1];
-
-            if ($isLocal == true && $pages[$i][1] !== '/' && $pages[$i][1] !== '') {
-                echo '.php';
-            }
-
-            echo '"';
-
-            if ($pages[$i][2] !== '') { echo ' title="' . $pages[$i][2] . '"'; }
-
-            echo '>' . $pages[$i][0] . '</a></div>';
-
-        };
-    
-    echo '<div class="menu login"><a href="/">Login</a></div>
-        </label>
     <header>
         <a href="/" title="Página Inicial">';
     
@@ -47,28 +23,30 @@
     include 'image.php';
 
     echo '</a>
-        <nav id="navbar">';
+    <label id="menu-label" for="toggle-menu">
+        <nav>';
+    
+            for ($i = 0; $i < count($pages); $i++) {
+                
+                echo '<div class="menu';
 
-    for ($i = 0; $i < count($pages); $i++) {
-        
-        echo '<a href="' . $pages[$i][1];
+                if ($pages[$i][1] == $active_page || $pages[$i][1] == '/' && $active_page == '') { echo ' active'; }
+                
+                echo '"><a href="' . $pages[$i][1];
 
-        if ($isLocal == true && $pages[$i][1] !== '/' && $pages[$i][1] !== '') {
-            echo '.php';
-        }
+                if ($isLocal == true && $pages[$i][1] !== '/' && $pages[$i][1] !== '') {
+                    echo '.php';
+                }
 
-        echo '"';
+                echo '"';
 
-        if ($pages[$i][2] !== '') { echo ' title="' . $pages[$i][2] . '"'; }
+                if ($pages[$i][2] !== '') { echo ' title="' . $pages[$i][2] . '"'; }
 
-        if ($pages[$i][1] == $active_page || $pages[$i][1] == '/' && $active_page == '') { echo ' class="active"'; }
+                echo '>' . $pages[$i][0] . '</a></div>';
 
-        echo '>' . $pages[$i][0] . '</a>';
-
-    };
-
-    echo '    
-        </nav>
+            };
+    
+    echo '</nav></label>
         <div id="header-right"></div>
     </header>';
 

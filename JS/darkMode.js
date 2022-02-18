@@ -34,13 +34,18 @@ function darkModeSetup() {
         document.getElementById("dark-mode").checked = false;
     }
 
+    // Inserts the elements according to the detected device (mobile / desktop)
     if (window.matchMedia("(orientation: portrait)").matches) {
-        document.getElementById("menu-label").insertBefore(darkSwitch, document.getElementById("menu-label").firstChild);
-        console.log('Mobile');
+        document.getElementById("header-right").remove();
+        let nav = document.getElementById("menu-label").children[0];
+        nav.insertBefore(darkSwitch, nav.firstChild);
+        loginButton.setAttribute("class", "menu login")
+        nav.appendChild(loginButton);
+        console.log('Device is Mobile');
     } else {
         document.getElementById("header-right").appendChild(darkSwitch);
         document.getElementById("header-right").appendChild(loginButton);
-        console.log('Not Mobile');
+        console.log('Device is not Mobile');
     }
 
     // Logs the Dark Mode state

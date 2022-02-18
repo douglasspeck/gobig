@@ -14,8 +14,6 @@ header {
     box-shadow: 0 0 calc(var(--x) * 1) #fff;
 }
 
-label[for="toggle-menu"] { display: none; }
-
 header img, header nav, #header-right {
     max-height: 6vh;
 }
@@ -36,40 +34,43 @@ header nav, #header-right {
     justify-content: space-evenly;
 }
 
-#header-right label {
+label[for="dark-mode"] {
+    --w: calc(4 * var(--x));
     cursor: pointer;
-    width: calc(4 * var(--x));
-    height: calc(4 * var(--x));
-    border-radius: calc(2 * var(--x));
+    width: var(--w);
+    height: var(--w);
+    border-radius: 50%;
     position: relative;
 }
 
-#header-right label::before {
+label[for="dark-mode"]::before {
+    --w: inherit;
     content: '';
     display: block;
     background-color: var(--c0);
     cursor: pointer;
-    border-radius: calc(2 * var(--x));
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(var(--x) * 2.5);
-    height: calc(var(--x) * 2.5);
-}
-
-#header-right label::after {
-    --y: 0.5;
-    content: '';
-    display: block;
-    width: calc(1.6 * var(--x));
-    height: calc(1.6 * var(--x));
     border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(calc(-50% + var(--x) * var(--y)), calc(-50% - var(--x) * var(--y)));
-    box-shadow: calc(var(--x) * -1 * var(--y)) calc(var(--x) * var(--y)) 0 1px #fff;
+    transform: translate(-50%, -50%);
+    width: calc(var(--w) * 5 / 8);
+    height: calc(var(--w) * 5 / 8);
+}
+
+label[for="dark-mode"]::after {
+    --w: inherit;
+    --y: 0.5;
+    content: '';
+    display: block;
+    width: calc(0.4 * var(--w));
+    height: calc(0.4 * var(--w));
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + var(--w) * 0.25 * var(--y)), calc(-50% - var(--w) * 0.25 * var(--y)));
+    box-shadow: calc(var(--w) * 0.25 * -1 * var(--y)) calc(var(--w) * 0.25 * var(--y)) 0 1px #fff;
 }
 
 #header-right a {
@@ -86,13 +87,13 @@ body.dark header {
     box-shadow: 0 0 calc(var(--x) * 1) var(--c0);
 }
 
-body.dark #header-right label::before {
+body.dark label[for="dark-mode"]::before {
     width: calc(var(--x) * 1.2);
     height: calc(var(--x) * 1.2);
     background-color: #fff;
 }
 
-body.dark #header-right label::after {
+body.dark label[for="dark-mode"]::after {
     width: calc(var(--x) * 0.3);
     height: calc(var(--x) * 0.3);
     transform: translate(-50%, -50%);
@@ -110,12 +111,20 @@ body.dark #header-right label::after {
 @media screen and (orientation: portrait) {
 
     header {
-        display: none;
+        grid-template-columns: 1fr 2fr;
+        height: 12vh;
     }
 
-    label[for="toggle-menu"] {
+    header img {
+        width: 100%;
+    }
+
+    header img, header nav, #header-right {
+        max-height: none;
+    }
+
+    #menu-label {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         width: calc(var(--x) * 9);
@@ -126,15 +135,26 @@ body.dark #header-right label::after {
         z-index: 10;
     }
 
-    #toggle-menu:not(:checked) ~ label[for="toggle-menu"] {
-        top: calc(var(--x) * 3);
-        right: calc(var(--x) * 3);
+    #menu-label > nav {
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #toggle-menu:not(:checked) ~ header #menu-label {
+        top: calc(var(--x) * 4);
+        right: calc(var(--x) * 1);
         width: calc(var(--x) * 9);
         height: calc(var(--x) * 9);
         border-radius: 50%;
     }
 
-    #toggle-menu:checked ~ label[for="toggle-menu"] {
+    #toggle-menu:checked ~ header #menu-label {
         top: 0;
         right: 0;
         width: 100vw;
@@ -142,8 +162,8 @@ body.dark #header-right label::after {
         border-radius: 0;
     }
 
-    label[for="toggle-menu"]::after,
-    label[for="toggle-menu"]::before {
+    header #menu-label::after,
+    header #menu-label::before {
         content: '';
         display: block;
         position: absolute;
@@ -155,20 +175,36 @@ body.dark #header-right label::after {
         transition: all 0.5s ease-in;
     }
 
-    label[for="toggle-menu"]::before {
+    header #menu-label::before {
         transform: rotate(-45deg);
     }
 
-    label[for="toggle-menu"]::after {
+    header #menu-label::after {
         transform: rotate(45deg);
     }
 
-    #toggle-menu:checked ~ label[for="toggle-menu"]::after,
-    #toggle-menu:checked ~ label[for="toggle-menu"]::before {
+    #toggle-menu:checked ~ header #menu-label::after,
+    #toggle-menu:checked ~ header #menu-label::before {
         width: calc(var(--x) * 4);
         height: calc(var(--x) * 1);
         top: calc(var(--x) * 8);
         right: calc(var(--x) * 5);
+    }
+
+    #toggle-menu:not(:checked) ~ header label[for="dark-mode"] {
+        --w: calc(var(--x) * 0);
+        opacity: 0;
+        transition: all 1s ease-in-out;
+        margin-bottom: 0;
+        z-index: -2;
+    }
+
+    #toggle-menu:checked ~ header label[for="dark-mode"] {
+        --w: calc(var(--x) * 8);
+        display: block;
+        opacity: 1;
+        margin-bottom: calc(var(--x) * 7);
+        transition: all 1s ease-in-out;
     }
 
     .menu {
@@ -189,20 +225,31 @@ body.dark #header-right label::after {
         --bg: var(--c1);
     }
 
-    #toggle-menu:not(:checked) ~ label .menu {
+    #toggle-menu:not(:checked) ~ header #menu-label .menu {
         width: calc(var(--x) * 5);
         height: calc(var(--x) * 0.8);
-        border: 0px solid var(--bg);
+        border: 1px solid var(--bg);
+        border-radius: 10 px;
         font-size: 0;
     }
 
-    #toggle-menu:not(:checked) ~ label .menu.login {
-        opacity: 0;
+    header #menu-label .menu.login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
     }
 
-    #toggle-menu:not(:checked) ~ label .menu:not(:last-child) { margin-bottom: calc(var(--x) * 0.8); }
+    #toggle-menu:not(:checked) ~ header #menu-label .menu.login {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        z-index: -2;
+    }
+    #toggle-menu:not(:checked) ~ header #menu-label .menu:nth-child(2),
+    #toggle-menu:not(:checked) ~ header #menu-label .menu:nth-child(3) { margin-bottom: calc(var(--x) * 0.8); }
 
-    #toggle-menu:checked ~ label .menu {
+    #toggle-menu:checked ~ header #menu-label .menu {
         background-color: transparent;
         border: 3px solid var(--bg);
         border-radius: var(--x);
@@ -211,13 +258,13 @@ body.dark #header-right label::after {
         font-size: calc(var(--x) * 4);
     }
     
-    #toggle-menu:checked ~ label .menu.login {
+    #toggle-menu:checked ~ header #menu-label .menu.login {
         width: calc(var(--x) * 25);
         border: none;
         background-color: var(--c1);
         color: #fff;
     }
 
-    #toggle-menu:checked ~ label .menu:not(:last-child) { margin-bottom: calc(var(--x) * 7); }
+    #toggle-menu:checked ~ header #menu-label .menu:not(:last-child) { margin-bottom: calc(var(--x) * 7); }
 
 }
