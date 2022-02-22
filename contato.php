@@ -36,6 +36,7 @@
         for ($i = 0; $i < count($js); $i++) {
             echo '<script src="JS/' . $js[$i] . '.js?t=' . date('YmdHis') . '"></script>';
         };
+        include 'PHP/clickheat.php';
     ?>
 </body>
 </html>
