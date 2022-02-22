@@ -19,11 +19,14 @@
             </div>
             <div>
                 <h1>Escreva-nos!</h1>
-                <form method="post" action="PHP/sendEmail.php">
+                <form id="sendEmail" method="post" action="PHP/sendEmail.php">
                     <input required type="text" name="name" placeholder="Seu Nome da Silva">
                     <input required type="text" name="email" placeholder="exemplo@seuemail.com">
                     <textarea required name="message" placeholder="Escreva sua mensagem aqui."></textarea>
-                    <button type="submit">Enviar</button>
+                    <button class="g-recaptcha"
+                            data-sitekey="6LcLFJYeAAAAAHdVGJoWJ43zxlT9IeLioUMzUa2T"
+                            data-callback='sendEmail'
+                            data-action='submit'>Enviar</button>
                 </form>
             </div>
         </div>
@@ -38,5 +41,11 @@
         };
         include 'PHP/clickheat.php';
     ?>
+    <script>
+       function sendEmail(token) {
+         document.getElementById("sendEmail").submit();
+       }
+    </script>
+  
 </body>
 </html>

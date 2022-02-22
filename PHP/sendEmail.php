@@ -30,9 +30,8 @@
     // Native function that sends the e-mail
     mail($to, $subject, $message, $headers);
 
-    /*
     // Returns to the last page
     header("Location: http://projetogobig.com.br/contato");
-    exit(); */
+    exit();
     
 ?>

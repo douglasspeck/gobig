@@ -41,6 +41,9 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') { $url = "https://"; 
             <meta name="keywords" content="' . $keywords . '">
             <link rel="canonical" href="' . $link . '">
 
+            <!-- reCAPTCHA -->
+            <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcLFJYeAAAAAHdVGJoWJ43zxlT9IeLioUMzUa2T"></script>
+
             <!-- Resources -->';
 
     for($i = 0; $i < count($resources); $i++) {
