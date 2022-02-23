@@ -1,19 +1,21 @@
-section:first-of-type {
+/* home.css */
+
+body#home section:first-of-type {
     grid-template-columns: 5fr 3fr;
 }
 
-figcaption {
+body#home figcaption {
     display: block;
     position: absolute;
     bottom: 0;
     right: 0;
 }
 
-section:nth-of-type(3) {
+body#home section:nth-of-type(3) {
     margin: 5vh auto 0;
 }
 
-section:nth-of-type(4) > * {
+body#home section:nth-of-type(4) > * {
     margin: auto;
     width: 80%;
     text-align: center;

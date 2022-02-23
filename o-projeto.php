@@ -3,7 +3,6 @@
     <?php
         $title = 'Sobre Nós – Projeto Go Big';
         $keywords = 'Educação';
-        $css = ['main', 'header', 'fonts', 'footer'];
         $resources = [];
         include 'PHP/head.php';
     ?>

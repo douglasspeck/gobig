@@ -3,7 +3,6 @@
     <?php
         $title = 'Projeto Go Big – Home';
         $keywords = 'Educação';
-        $css = ['main', 'header', 'fonts', 'home', 'footer'];
         $resources = [
             ['preload','image','/IMG/Logo/logo','.png',[50,399]],
             ['preload','image','/IMG/Logo/logo-dark','.png',[50,399]],

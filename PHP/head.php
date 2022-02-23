@@ -1,29 +1,6 @@
 <?php
 
-/* URL Methods */
-
-if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') { $url = "https://"; }  
-    else {$url = "http://"; }  
-    // Append the host(domain name, ip) to the URL.   
-    $url.= $_SERVER['HTTP_HOST'];   
-    
-    // Append the requested resource location to the URL   
-    $url.= $_SERVER['REQUEST_URI'];
-    
-    $link = basename(__FILE__, '.php');
-    if ($link = 'index') {
-        $link = '';
-    };
-    
-    $isLocal = false;
-    
-    if (strpos($url, 'projetogobig') !== false) {
-        $link = 'https://projetogobig.com.br/' . $link;
-        str_replace('.php', '', $link);
-    } else if (strpos($url, 'localhost') !== false) {
-        $link = 'http://localhost:3000/' . $link;
-        $isLocal = true;
-    }
+    include 'url.php';
 
     echo '
         <head>
@@ -68,17 +45,13 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') { $url = "https://"; 
             <!-- Favicons -->
 
             <!-- Fonts -->
-            <link href="//fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">';
+            <link href="//fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-    if (count($css) > 0) {echo '<!-- Stylesheets -->';};
-    for($i = 0; $i < count($css); $i++) {
-        echo('<link rel="preload" as="style" onload="this.rel = \'stylesheet\'; this.removeAttribute(\'as\'); this.removeAttribute(\'onload\');" href="/CSS/'.$css[$i].'.css?t=' . date('YmdHis') . '" type="text/css">');
-    }
-    echo '<noscript>';
-    for($i = 0; $i < count($css); $i++) {
-        echo('<link rel="stylesheet" href="/CSS/'.$css[$i].'.css?t=' . date('YmdHis') . '" type="text/css">');
-    }
-    echo '</noscript>';
+            <!-- Stylesheets -->
+            <link rel="preload" as="style" onload="this.rel = \'stylesheet\'; this.removeAttribute(\'as\'); this.removeAttribute(\'onload\');" href="/PHP/stylesheets.php?t=' . date('YmdHis') . '" type="text/css">
+            <noscript>
+                <link rel="stylesheet" href="/PHP/stylesheets.php?t=' . date('YmdHis') . '" type="text/css">
+            </noscript>';
 
     echo '</head>';
 ?>
