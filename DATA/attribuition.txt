@@ -1,1 +1,6 @@
+LANDING PAGE IMAGE
 <a href='https://www.freepik.com/vectors/people'>People vector created by stories - www.freepik.com</a>
+
+SINGLE-DOCUMENT CSS STYLESHEET
+<a href='https://stackoverflow.com/users/1227660/john-louie-bi%c3%b1as'>John Louie Biñas</a>
+at <a href='https://stackoverflow.com/questions/9862904/css-merging-with-php'>Stack Overflow</a>
