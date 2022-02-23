@@ -215,3 +215,7 @@ form > button {
     width: 50%;
     font-weight: bold;
 }
+
+body:not(#contato) .grecaptcha-badge { 
+    visibility: hidden;
+}

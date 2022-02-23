@@ -7,7 +7,7 @@
         $resources = [];
         include 'PHP/head.php';
     ?>
-<body hidden>
+<body id="contato" hidden>
     <?php include 'PHP/header.php'; ?>
     <main>
         <div id="contact-wrapper">
